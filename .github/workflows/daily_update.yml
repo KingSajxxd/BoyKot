@@ -1,19 +1,20 @@
-name: Daily Brand Update
+name: Weekly Brand Update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight UTC
-  workflow_dispatch: # Allows you to click a button to run it manually
+    # Run at 00:00 on Sunday
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allows manual trigger button
 
 permissions:
-  contents: write # Gives the robot permission to save the file
+  contents: write
 
 jobs:
-  scrape-and-update:
+  update-database:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repo
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -21,26 +22,32 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install Libraries
         run: |
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Run Scraper
+      - name: Run Scrapers (Order Matters!)
         run: |
           cd backend
-          python live_scraper.py
+          # 1. Run Disoccupied first (Primary Source)
+          echo "🚀 Running Disoccupied Scraper..."
+          python full_disoccupied_scraper.py
+          
+          # 2. Run Builder second (Fill gaps)
+          echo "🚀 Running Builder (Boycott-Israel)..."
+          python builder.py
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         run: |
           git config --global user.name "BoyKot Bot"
           git config --global user.email "bot@boykot.app"
           
-          # Check if anything changed
           if [[ -n $(git status --porcelain) ]]; then
             git add app/assets/boycott_data.json
-            git commit -m "🤖 Daily Data Update: $(date +'%Y-%m-%d')"
+            git add app/assets/images/*
+            git commit -m "🤖 Weekly Data Update: $(date +'%Y-%m-%d')"
             git push
           else
-            echo "No changes found today."
+            echo "No changes found."
           fi
