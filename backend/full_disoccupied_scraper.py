@@ -19,74 +19,82 @@ HEADERS = {
     "X-Requested-With": "XMLHttpRequest",
 }
 
-# --- ONLY "LIKELY-TO-EXIST" SEEDS ON DISOCCUPIED ---
-# Keep these as simple consumer-facing names.
+# --- SEED LIST ---
 MANUAL_SEEDS = [
-    # Food / drink (commonly present)
+    # Fast Food
     "McDonalds", "Starbucks", "Coca Cola", "Pepsi", "Nestle",
     "Burger King", "KFC", "Subway", "Pizza Hut", "Dominos", "Papa Johns",
     "Wendys", "Taco Bell", "Dunkin", "Krispy Kreme", "Tim Hortons", "Costa Coffee",
+    "Hardees", "Five Guys", "Shake Shack",
+
+    # Snacks & Drinks
     "Nescafe", "Nespresso", "Maggi", "KitKat", "Cadbury", "Oreo", "Lindt", "Nutella",
-    "Pringles", "Lays", "Doritos", "Cheetos",
+    "Pringles", "Lays", "Doritos", "Cheetos", "Toblerone", "Milka", "Ben & Jerry's",
     "Gatorade", "Powerade", "Dasani", "Aquafina", "Sprite", "Fanta", "7Up",
+    "Mountain Dew", "Dr Pepper", "Schweppes", "Tropicana", "Minute Maid", "Lipton",
 
-    # Retail / shopping
-    "Amazon", "Walmart", "Target", "Costco",
-    "Carrefour", "Tesco", "Lidl", "Aldi", "IKEA",
-    "Marks and Spencer", "Zara", "H&M", "Uniqlo",
-
-    # Tech / electronics (simple parent brand names only)
+    # Retail & Tech
+    "Amazon", "Walmart", "Target", "Costco", "Carrefour", "Tesco", "Lidl", "Aldi", "IKEA",
     "Google", "Microsoft", "Apple", "Meta", "Facebook", "Instagram", "WhatsApp",
-    "Samsung", "Sony", "LG", "Intel", "HP", "Dell", "Lenovo", "Nvidia",
+    "Samsung", "Sony", "LG", "Intel", "HP", "Dell", "Lenovo", "Nvidia", "Siemens",
+    "Puma", "Adidas", "Nike", "Zara", "H&M", "Uniqlo", "Marks and Spencer",
 
-    # Streaming / media (brand names only)
-    "Netflix", "Disney",
+    # Beauty & Personal Care
+    "Loreal", "Garnier", "Maybelline", "Revlon", "Clinique", "MAC Cosmetics",
+    "Estee Lauder", "Victoria's Secret", "Bath and Body Works", "Ahava",
+    "Nivea", "Dove", "Axe", "Vaseline", "Pantene", "Gillette", "Colgate", "Listerine",
+    "Head and Shoulders", "Oral-B", "CeraVe", "La Roche-Posay",
 
-    # Fashion / sportswear
-    "Nike", "Adidas", "Puma", "Reebok", "Under Armour",
-
-    # Beauty / personal care (brand names only)
-    "Loreal", "Garnier", "Maybelline", "Revlon", "Clinique", "MAC",
-    "Nivea", "Dove", "Axe", "Vaseline",
-    "Pantene", "Gillette", "Colgate", "Listerine",
-
-    # Travel / booking (simple)
-    "Airbnb", "Booking", "Expedia", "TripAdvisor", "Agoda", "Uber",
-
-    # Banks / finance / insurance (often present as brand names)
-    "AXA", "HSBC", "Barclays",
-
-    # Misc
-    "Siemens",
+    # Travel & Finance
+    "Airbnb", "Booking.com", "Expedia", "TripAdvisor", "Uber",
+    "AXA", "HSBC", "Barclays", "Pillsbury", "General Mills"
 ]
-
-# Common “human input” -> “Disoccupied-friendly” variations
-# (we'll generate variants so user can type anything and you still hit the right page)
-SEED_ALIASES = {
-    "McDonald's": "McDonalds",
-    "Domino's": "Dominos",
-    "Papa John's": "Papa Johns",
-    "Wendy's": "Wendys",
-    "H&M": "H&M",
-    "L'Oréal": "Loreal",
-    "L’Oreal": "Loreal",
-    "Nestlé": "Nestle",
-    "7-Up": "7Up",
-    "Coca-Cola": "Coca Cola",
-}
 
 def setup_dirs():
     if not os.path.exists(IMAGES_DIR):
         os.makedirs(IMAGES_DIR)
 
 def clean_text(text):
-    if not text:
-        return ""
+    if not text: return ""
     return text.replace("\n", " ").strip()
 
+def get_csrf_token(session):
+    """Fetches the homepage to get a CSRF token for searching."""
+    try:
+        r = session.get(BASE_URL, headers=HEADERS, timeout=10)
+        soup = BeautifulSoup(r.text, "html.parser")
+        token = soup.find("input", {"name": "csrfmiddlewaretoken"})
+        if token:
+            return token["value"]
+    except:
+        pass
+    return None
+
+def resolve_seed_url(session, token, seed_name):
+    """
+    SEARCHES for the brand name instead of guessing the URL.
+    Returns a list of actual URLs found (e.g. search 'Dominos' -> finds '/brand/dominos-pizza/')
+    """
+    found_urls = []
+    if not token: return []
+    
+    try:
+        payload = {'csrfmiddlewaretoken': token, 'search_text': seed_name}
+        r = session.post(BASE_URL, data=payload, headers=HEADERS, timeout=10)
+        
+        # Parse HTML results
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=True):
+            if a['href'].startswith("/brand/") and a['href'] != "/brand/":
+                found_urls.append(f"{BASE_URL}{a['href']}")
+                
+    except Exception as e:
+        print(f"   ⚠️ Search failed for '{seed_name}': {e}")
+        
+    return found_urls
+
 def download_image(url):
-    if not url:
-        return None
+    if not url: return None
     try:
         filename = url.split("/")[-1].split("?")[0]
         filename = re.sub(r"[^\w\-_\.]", "", filename)
@@ -115,50 +123,8 @@ def fetch_sitemap(session):
                 urls.add(f"{BASE_URL}/brand/{decoded}/")
             print(f"   ✅ Found {len(urls)} brands in Sitemap!")
     except:
-        pass
+        print("   ⚠️ Sitemap not available. relying on Smart Search.")
     return urls
-
-def normalize_seed(s: str) -> str:
-    s = s.strip()
-    if s in SEED_ALIASES:
-        s = SEED_ALIASES[s]
-    # remove weird quotes/apostrophes but keep & (H&M)
-    s = s.replace("’", "'").replace("“", '"').replace("”", '"')
-    s = s.replace("'", "")  # McDonald's -> McDonalds
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
-def seed_variants(s: str):
-    """
-    Generate variants: 'Coca Cola', 'CocaCola', 'Coca-Cola'
-    """
-    s = normalize_seed(s)
-    variants = {s}
-
-    # 1. Remove spaces (CocaCola)
-    no_space = s.replace(" ", "")
-    if len(no_space) > 2:
-        variants.add(no_space)
-
-    # 2. Replace & with 'and'
-    if "&" in s:
-        variants.add(s.replace("&", "and"))
-
-    # 3. Hyphenated (Coca-Cola) - NEW ADDITION
-    if " " in s:
-        variants.add(s.replace(" ", "-"))
-
-    # 4. Title case
-    variants.add(s.title())
-
-    # --- THIS WAS MISSING ---
-    out = []
-    for v in variants:
-        v = v.strip()
-        if len(v) >= 2:
-            out.append(v)
-            
-    return list(dict.fromkeys(out))
 
 def scrape_brand_details(session, brand_url):
     time.sleep(random.uniform(0.5, 1.0))
@@ -228,23 +194,33 @@ def scrape_brand_details(session, brand_url):
         return None, []
 
 def main():
-    print("--- STARTING MEGA-SEED SCRAPER (DISOCCUPIED-FRIENDLY) ---")
+    print("--- STARTING SMART-SEARCH SCRAPER ---")
     setup_dirs()
     session = requests.Session()
-
-    # 1) Start from sitemap
+    
+    # 1. Try Sitemap First
     queue_urls = fetch_sitemap(session)
 
-    # 2) Add manual seeds BUT as Disoccupied-friendly variants
-    seed_count = 0
-    for s in MANUAL_SEEDS:
-        for v in seed_variants(s):
-            safe_name = urllib.parse.quote(v)
-            queue_urls.add(f"{BASE_URL}/brand/{safe_name}/")
-            seed_count += 1
+    # 2. Smart Search for Manual Seeds
+    print(f"🔎 Resolving {len(MANUAL_SEEDS)} seeds via Search...")
+    csrf_token = get_csrf_token(session)
+    
+    if csrf_token:
+        found_seeds = 0
+        for i, seed in enumerate(MANUAL_SEEDS):
+            if i % 10 == 0: print(f"   ...searching batch {i+1}-{i+10}...")
+            
+            real_urls = resolve_seed_url(session, csrf_token, seed)
+            for url in real_urls:
+                queue_urls.add(url)
+                found_seeds += 1
+            
+            time.sleep(0.5) # Be polite
+        print(f"   ✅ Resolved {found_seeds} valid URLs from seeds.")
+    else:
+        print("   ❌ Could not get CSRF token. Skipping smart search.")
 
-    print(f"   🌱 Added ~{seed_count} seed URL variants from {len(MANUAL_SEEDS)} seeds.")
-    print(f"\n--- CRAWLING {len(queue_urls)} INITIAL TARGETS ---")
+    print(f"\n--- CRAWLING {len(queue_urls)} TARGETS ---")
 
     visited = set()
     final_items = []
@@ -261,15 +237,13 @@ def main():
             pass
 
     queue_list = list(queue_urls)
-
     i = 0
     while i < len(queue_list):
         url = queue_list[i]
         i += 1
 
         clean_url = url if url.endswith("/") else url + "/"
-        if clean_url in visited:
-            continue
+        if clean_url in visited: continue
         visited.add(clean_url)
 
         brand_name = urllib.parse.unquote(clean_url.split("/")[-2])
@@ -278,26 +252,28 @@ def main():
         data, new_links = scrape_brand_details(session, clean_url)
 
         if data:
+            # Deduplicate by name
             existing_names = {x.get("name") for x in final_items}
             if data["name"] not in existing_names:
                 final_items.append(data)
 
+            # Add new spider links
             for link in new_links:
                 clean_link = link if link.endswith("/") else link + "/"
                 if clean_link not in visited and clean_link not in queue_list:
                     queue_list.append(clean_link)
 
+        # Save frequently
         if i % 20 == 0:
             with open(OUTPUT_FILE, "w") as f:
                 json.dump(
                     {"meta": {"updated": time.strftime("%Y-%m-%d")}, "items": final_items},
-                    f,
-                    indent=2,
-                    ensure_ascii=False,
+                    f, indent=2, ensure_ascii=False
                 )
 
+    # Final Save
     output = {
-        "meta": {"source": "Disoccupied Seeds (Brand-Only)", "updated": time.strftime("%Y-%m-%d")},
+        "meta": {"source": "Disoccupied Smart-Seed", "updated": time.strftime("%Y-%m-%d")},
         "toll": {"killed": 73000, "injured": 171000, "children": 21000, "last_update": "Live"},
         "items": final_items,
     }
