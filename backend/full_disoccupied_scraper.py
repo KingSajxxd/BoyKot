@@ -151,7 +151,14 @@ def seed_variants(s: str):
     # 4. Title case
     variants.add(s.title())
 
-    return list(dict.fromkeys(out)) # (keep the rest of your cleaning logic here)
+    # --- THIS WAS MISSING ---
+    out = []
+    for v in variants:
+        v = v.strip()
+        if len(v) >= 2:
+            out.append(v)
+            
+    return list(dict.fromkeys(out))
 
 def scrape_brand_details(session, brand_url):
     time.sleep(random.uniform(0.5, 1.0))
