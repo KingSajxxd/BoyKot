@@ -1,0 +1,34 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Flutter/Dart
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.pub-cache/
+
+# Android
+app/android/.gradle/
+app/android/local.properties
+
+# iOS/macOS
+app/ios/Flutter/ephemeral/
+app/ios/Pods/
+app/ios/.symlinks/
+app/ios/Flutter/Generated.xcconfig
+app/ios/Flutter/flutter_export_environment.sh
+app/macos/Flutter/ephemeral/
+app/macos/Pods/
+app/macos/.symlinks/
+
+# Windows/Linux
+app/windows/flutter/ephemeral/
+app/linux/flutter/ephemeral/
+
+# IDE/OS
+.DS_Store
+.idea/
+*.iml
