@@ -1,6 +1,15 @@
 {
   "meta": {
+    "source": "Merged Database",
     "updated": "2026-02-09"
+  },
+  "toll": {
+    "killed": 72027,
+    "injured": 171651,
+    "children": 20179,
+    "women": 12500,
+    "starved": 463,
+    "last_update": "2026-02-07"
   },
   "items": [
     {
@@ -225,7 +234,7 @@
     {
       "name": "Danone",
       "status": "Avoid",
-      "description": "Danone is a French multinational food-products corporation that holds 20% shares of Israel’s Strauss Group food company. This direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that Danone puts profits over justice and equality.",
+      "description": "Danone is a French multinational food-products corporation that holds 20% shares of Israel\u2019s Strauss Group food company. This direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that Danone puts profits over justice and equality.",
       "alternatives": [
         "Parmalat",
         "Yeo Valley Organic",
@@ -234,7 +243,7 @@
         "Cocio",
         "Almarai",
         "Hood",
-        "Délice",
+        "D\u00e9lice",
         "Natures Promise",
         "Land O Lakes",
         "Tillamook"
@@ -334,7 +343,7 @@
     {
       "name": "Netflix",
       "status": "Avoid",
-      "description": "Netflix introduced a collection titled Palestinian Stories showcasing films by acclaimed Arab filmmakers like Born in Gaza, while also carrying Israeli content like Fauda, which glorifies Israeli security forces and perpetuates a biased narrative.  The platform’s release of Palestinian or Israeli films doesn’t necessarily reflect support for a political cause. Instead, it aligns with Netflix mission to showcase diverse global narratives. We advise you to avoid any choices associated with artists who have publicly supported Israel.",
+      "description": "Netflix introduced a collection titled Palestinian Stories showcasing films by acclaimed Arab filmmakers like Born in Gaza, while also carrying Israeli content like Fauda, which glorifies Israeli security forces and perpetuates a biased narrative.  The platform\u2019s release of Palestinian or Israeli films doesn\u2019t necessarily reflect support for a political cause. Instead, it aligns with Netflix mission to showcase diverse global narratives. We advise you to avoid any choices associated with artists who have publicly supported Israel.",
       "alternatives": [],
       "logo_asset": "assets/images/Netflix_logo.png",
       "category": "General",
@@ -343,7 +352,7 @@
     {
       "name": "Burger King",
       "status": "Avoid",
-      "description": "RBI owns Burger King, Tim Hortons, and Popeyes. RBI stock is 17.6% of the holdings of Zionist billionaire Bill Ackman’s investment fund Pershing Square Capital. Ackman has repeatedly used his wealth to intimidate those with less power, including Harvard pro-Palestinian student activists and faculty. Another 18.1% of Ackman's portfolio consists of Chipotle stock. Over 30% of his assets are in these four brands. We cannot contribute to increasing Bill Ackman's wealth and will continue to follow and expose his investments.",
+      "description": "RBI owns Burger King, Tim Hortons, and Popeyes. RBI stock is 17.6% of the holdings of Zionist billionaire Bill Ackman\u2019s investment fund Pershing Square Capital. Ackman has repeatedly used his wealth to intimidate those with less power, including Harvard pro-Palestinian student activists and faculty. Another 18.1% of Ackman's portfolio consists of Chipotle stock. Over 30% of his assets are in these four brands. We cannot contribute to increasing Bill Ackman's wealth and will continue to follow and expose his investments.",
       "alternatives": [
         "Taco Del Mar",
         "Chick Fil A",
@@ -563,7 +572,7 @@
     {
       "name": "Tim Hortons",
       "status": "Avoid",
-      "description": "RBI owns Burger King, Tim Hortons, and Popeyes. RBI stock is 17.6% of the holdings of Zionist billionaire Bill Ackman’s investment fund Pershing Square Capital. Ackman has repeatedly used his wealth to intimidate those with less power, including Harvard pro-Palestinian student activists and faculty. Another 18.1% of Ackman's portfolio consists of Chipotle stock. Over 30% of his assets are in these four brands. We cannot contribute to increasing Bill Ackman's wealth and will continue to follow and expose his investments.",
+      "description": "RBI owns Burger King, Tim Hortons, and Popeyes. RBI stock is 17.6% of the holdings of Zionist billionaire Bill Ackman\u2019s investment fund Pershing Square Capital. Ackman has repeatedly used his wealth to intimidate those with less power, including Harvard pro-Palestinian student activists and faculty. Another 18.1% of Ackman's portfolio consists of Chipotle stock. Over 30% of his assets are in these four brands. We cannot contribute to increasing Bill Ackman's wealth and will continue to follow and expose his investments.",
       "alternatives": [
         "Better Buzz Coffee",
         "Nothing Bundt Cakes",
@@ -735,7 +744,7 @@
     {
       "name": "Starbucks",
       "status": "Avoid",
-      "description": "Starbucks claims to be neutral but has taken legal action against its workers union for expressing solidarity with Palestine. It profits from 1900 stores in the Middle East and North Africa, and had $36 billion annual revenue in 2023, higher than the GDP of 91 countries. We call on Starbucks to use its vast influence to advocate for an end to the Israeli Occupation. Instead Howard Schultz, the founder and largest private owner of Starbucks stock invests heavily in Israel's economy, including a recent investment in cybersecurity startup Wiz. This investment underscores Schultz’s commitment to Israel’s economic growth with the effect of normalizing the occupation of Palestine.",
+      "description": "Starbucks claims to be neutral but has taken legal action against its workers union for expressing solidarity with Palestine. It profits from 1900 stores in the Middle East and North Africa, and had $36 billion annual revenue in 2023, higher than the GDP of 91 countries. We call on Starbucks to use its vast influence to advocate for an end to the Israeli Occupation. Instead Howard Schultz, the founder and largest private owner of Starbucks stock invests heavily in Israel's economy, including a recent investment in cybersecurity startup Wiz. This investment underscores Schultz\u2019s commitment to Israel\u2019s economic growth with the effect of normalizing the occupation of Palestine.",
       "alternatives": [
         "Better Buzz Coffee",
         "Second Cup",
@@ -1236,7 +1245,7 @@
     {
       "name": "Paramount",
       "status": "Avoid",
-      "description": "Paramount Global stated, 'We stand with the people of Israel and the global Jewish community.\"",
+      "description": "Paramount Global\u00a0stated, 'We stand with the people of Israel and the global Jewish community.\"",
       "alternatives": [],
       "logo_asset": "assets/images/Paramount_logo.jpg",
       "category": "General",
@@ -1346,7 +1355,7 @@
     {
       "name": "Knorr",
       "status": "Avoid",
-      "description": "Unilever has invested over $250 million in Israel over the past decade and stated, “We look forward to continuing to make a positive contribution to Israel’s economy and society for many decades to come.” Unilever's Annual Revenue was $63.29 billion in 2023, higher than the GDP of 122 countries. We call on Unilever to use this massive influence to advocate for justice in Palestine.",
+      "description": "Unilever has invested over $250 million in Israel over the past decade and stated, \u201cWe look forward to continuing to make a positive contribution to Israel\u2019s economy and society for many decades to come.\u201d Unilever's Annual Revenue was $63.29 billion in 2023, higher than the GDP of 122 countries. We call on Unilever to use this massive influence to advocate for justice in Palestine.",
       "alternatives": [
         "Carol Shelbys",
         "Swanson",
@@ -1793,7 +1802,7 @@
     {
       "name": "Chevron",
       "status": "Avoid",
-      "description": "Chevron is the main extractor of fossil gas claimed by Israel in the Eastern Mediterranean. As such, Chevron brings Israel billions of dollars in revenue, helping to finance Israel’s occupation over the Palestinian people.",
+      "description": "Chevron is the main extractor of fossil gas claimed by Israel in the Eastern Mediterranean. As such, Chevron brings Israel billions of dollars in revenue, helping to finance Israel\u2019s occupation over the Palestinian people.",
       "alternatives": [
         "Wawa Stores",
         "Sheetz Stores"
@@ -1805,7 +1814,7 @@
     {
       "name": "Google",
       "status": "Avoid",
-      "description": "Alphabet Inc owns Google. Amazon and Google are working together on Project Nimbus, a $1.2bn contract to provide cloud services for the Israeli military and government, allowing for further surveillance of and unlawful data collection on Palestinians, and facilitates expansion of Israel’s illegal settlements on Palestinian land.",
+      "description": "Alphabet Inc owns Google. Amazon and Google are working together on Project Nimbus, a $1.2bn contract to provide cloud services for the Israeli military and government, allowing for further surveillance of and unlawful data collection on Palestinians, and facilitates expansion of Israel\u2019s illegal settlements on Palestinian land.",
       "alternatives": [],
       "logo_asset": "assets/images/Google_logo.jpg",
       "category": "General",
@@ -1814,7 +1823,7 @@
     {
       "name": "Booking.com",
       "status": "Avoid",
-      "description": "Booking Holdings also owns Priceline, Momondo, Swoodo, Rentalcars.com, Cheapflights, Agoda, KAYAK and OpenTable. The company is on many boycott lists because it lists properties in illegal West Bank settlements, but we view them as a better option than Expedia Group. Booking Holding has at least tried to designate Israeli settlements in the occupied West Bank as “occupied territory” and warning of “an increased risk to safety and human rights”, but reversed this decision under US government pressure. The company is being sued in a Dutch court for money laundering related to profits from war crimes through facilitating rental of homes on stolen land. It is advisable to book travel directly on the airline, hotel, and property owner websites.",
+      "description": "Booking Holdings also owns Priceline, Momondo, Swoodo, Rentalcars.com, Cheapflights, Agoda, KAYAK and OpenTable. The company is on many boycott lists because it lists properties in illegal West Bank settlements, but we view them as a better option than Expedia Group. Booking Holding has at least tried to designate Israeli settlements in the occupied West Bank as \u201coccupied territory\u201d and warning of \u201can increased risk to safety and human rights\u201d, but reversed this decision under US government pressure. The company is being sued in a Dutch court for money laundering related to profits from war crimes through facilitating rental of homes on stolen land. It is advisable to book travel directly on the airline, hotel, and property owner websites.",
       "alternatives": [
         "Mr & Mrs Smith",
         "Secret Escapes",
@@ -1892,7 +1901,7 @@
     {
       "name": "Puma",
       "status": "Avoid",
-      "description": "Although Puma is not renewing as main sponsor of the Israel Football Association (IFA), which includes teams in Israel’s illegal settlements on occupied Palestinian land, we urge you to keep up the boycott till they publicly oppose the Occupation.",
+      "description": "Although Puma is not renewing as main sponsor of the Israel Football Association (IFA), which includes teams in Israel\u2019s illegal settlements on occupied Palestinian land, we urge you to keep up the boycott till they publicly oppose the Occupation.",
       "alternatives": [
         "Po-Zu",
         "Brandblack",
@@ -2065,7 +2074,7 @@
     {
       "name": "Zara",
       "status": "Avoid",
-      "description": "Inditex owns several fashion brands including Zara, Stradavarius, Massimo Dutti, and Bershka. Zara operates multiple stores in Israel through its local franchisee Joey Schwebel, an extreme Zionist who hosts and campaigns with anti-Palestinian politician Itamar Ben Gvir. Inditex’s direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that the company puts profits over justice and equality.",
+      "description": "Inditex owns several fashion brands including Zara, Stradavarius, Massimo Dutti, and Bershka. Zara operates multiple stores in Israel through its local franchisee Joey Schwebel, an extreme Zionist who hosts and campaigns with anti-Palestinian politician Itamar Ben Gvir. Inditex\u2019s direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that the company puts profits over justice and equality.",
       "alternatives": [
         "Alfani Clothing",
         "Honest Basics",
@@ -2152,7 +2161,7 @@
     {
       "name": "Unilever",
       "status": "Avoid",
-      "description": "Unilever has invested over $250 million in Israel over the past decade and stated, “We look forward to continuing to make a positive contribution to Israel’s economy and society for many decades to come.” Unilever's Annual Revenue was $63.29 billion in 2023, higher than the GDP of 122 countries. We call on Unilever to use this massive influence to advocate for justice in Palestine.",
+      "description": "Unilever has invested over $250 million in Israel over the past decade and stated, \u201cWe look forward to continuing to make a positive contribution to Israel\u2019s economy and society for many decades to come.\u201d Unilever's Annual Revenue was $63.29 billion in 2023, higher than the GDP of 122 countries. We call on Unilever to use this massive influence to advocate for justice in Palestine.",
       "alternatives": [
         "Church and Dwight",
         "Kao Corporation",
@@ -2222,7 +2231,7 @@
     {
       "name": "Walmart",
       "status": "Avoid",
-      "description": "Walmart has claimed neutrality by donating $1 million each to relief efforts in both Israel and Gaza.  However, Walmart invests in Israeli companies and employs 171 people in the country. This investment underscores its commitment to Israel’s economic growth with the effect of normalizing the occupation of Palestine. It’s $611 billion annual revenue in 2023, is higher than the GDP of 175 countries. We call on Walmart to use its vast influence to advocate for an end to the Israeli Occupation.",
+      "description": "Walmart has claimed neutrality by donating $1 million each to relief efforts in both Israel and Gaza.  However, Walmart invests in Israeli companies and employs 171 people in the country. This investment underscores its commitment to Israel\u2019s economic growth with the effect of normalizing the occupation of Palestine. It\u2019s $611 billion annual revenue in 2023, is higher than the GDP of 175 countries. We call on Walmart to use its vast influence to advocate for an end to the Israeli Occupation.",
       "alternatives": [
         "Marshalls Stores",
         "Pick N Save",
@@ -2578,7 +2587,7 @@
     {
       "name": "Activia",
       "status": "Avoid",
-      "description": "Danone is a French multinational food-products corporation that holds 20% shares of Israel’s Strauss Group food company. This direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that Danone puts profits over justice and equality.",
+      "description": "Danone is a French multinational food-products corporation that holds 20% shares of Israel\u2019s Strauss Group food company. This direct involvement in the Israeli economy strengthens its brutal policies towards the Palestinians, normalizes the Occupation, and shows that Danone puts profits over justice and equality.",
       "alternatives": [
         "Siggis",
         "The Greek Gods Yogurt",
@@ -2610,7 +2619,7 @@
     {
       "name": "Ahava",
       "status": "Avoid",
-      "description": "Ahava products are crafted using “Dead Sea minerals” sourced from contested natural reserves in the West Bank and are manufactured in the unlawful settlement of Mitzpe Shalem.",
+      "description": "Ahava products are crafted using \u201cDead Sea minerals\u201d sourced from contested natural reserves in the West Bank and are manufactured in the unlawful settlement of Mitzpe Shalem.",
       "alternatives": [
         "Biore",
         "Byoma (North America only)",
@@ -4480,7 +4489,7 @@
     {
       "name": "Stichd",
       "status": "Avoid",
-      "description": "Although Puma is not renewing as main sponsor of the Israel Football Association (IFA), which includes teams in Israel’s illegal settlements on occupied Palestinian land, we urge you to keep up the boycott till they publicly oppose the Occupation.",
+      "description": "Although Puma is not renewing as main sponsor of the Israel Football Association (IFA), which includes teams in Israel\u2019s illegal settlements on occupied Palestinian land, we urge you to keep up the boycott till they publicly oppose the Occupation.",
       "alternatives": [
         "Po-Zu",
         "Brandblack",
@@ -4542,7 +4551,7 @@
     {
       "name": "Lush",
       "status": "Safe",
-      "description": "Lush has been very vocal with sales of their watermelon soap directly supporting relief in Gaza. There has been skepticism about the sourcing of olive oil in some of their products. While we would like to see Lush change the labeling from “Israel” to “Occupied Territories,” it's important to consider the direct quotes from Sindyanna, the organization they source their olive oil from: “Sindyanna’s olive oil comes from both local olive growers and two olive groves leased from Arab farmers.” Additionally, the website highlights: “It’s an activity through which we show the close cooperation between Arab and Jewish societies, demonstrating that we can have a cooperative economy and work together to build a more just and equal society.”",
+      "description": "Lush has been very vocal with sales of their watermelon soap directly supporting relief in Gaza. There has been skepticism about the sourcing of olive oil in some of their products. While we would like to see Lush change the labeling from \u201cIsrael\u201d to \u201cOccupied Territories,\u201d it's important to consider the direct quotes from Sindyanna, the organization they source their olive oil from: \u201cSindyanna\u2019s olive oil comes from both local olive growers and two olive groves leased from Arab farmers.\u201d Additionally, the website highlights: \u201cIt\u2019s an activity through which we show the close cooperation between Arab and Jewish societies, demonstrating that we can have a cooperative economy and work together to build a more just and equal society.\u201d",
       "alternatives": [
         "EO Products",
         "Everyone",
@@ -5503,9 +5512,9 @@
       "subbrands": []
     },
     {
-      "name": "Délice",
+      "name": "D\u00e9lice",
       "status": "Avoid",
-      "description": "We recommend checking, if the product brand is \"Delice-Danone\", then the action should be Do Not Buy. Délice doesnt have any known direct involvement in Israeli economy and they have even declared support for Palestine on their Instagram, but its partner, Danone, which owns parts of its subsidiaries, has been complicit. The subsidiaries that Danone co-owns are STIAL and SOCOGES, with SOCOGES making almost half of the revenues of the whole Delice Holding in 2014.",
+      "description": "We recommend checking, if the product brand is \"Delice-Danone\", then the action should be Do Not Buy. D\u00e9lice doesnt have any known direct involvement in Israeli economy and they have even declared support for Palestine on their Instagram, but its partner, Danone, which owns parts of its subsidiaries, has been complicit. The subsidiaries that Danone co-owns are STIAL and SOCOGES, with SOCOGES making almost half of the revenues of the whole Delice Holding in 2014.",
       "alternatives": [
         "Parmalat",
         "Yeo Valley Organic",
@@ -6558,7 +6567,7 @@
     {
       "name": "Amul Food Products",
       "status": "Avoid",
-      "description": "Although Amul is a cooperative of Gujarat’s dairy sector with membership including many minority farmers, it is also a critical vote bank for Narendra Modi's Hindu nationalist BJP government. The support of Amul's stakeholders has been one of the reasons for the party’s dominance in the state. Almost all the district cooperatives are headed by BJP leaders. For instance, Tharad MLA and Gujarat legislative assembly speaker Shankar Chaudhary heads the Banas Dairy as chairman. Deputy assembly speaker Jetha Bharwad, the MLA from Shehra constituency, heads the Panchmahal District Cooperative Milk Producers’ Union as its chairman. In addition, Amul has hosted Israeli delegations to collaborate on projects in India.",
+      "description": "Although Amul is a cooperative of Gujarat\u2019s dairy sector with membership including many minority farmers, it is also a critical vote bank for Narendra Modi's Hindu nationalist BJP government. The support of Amul's stakeholders has been one of the reasons for the party\u2019s dominance in the state. Almost all the district cooperatives are headed by BJP leaders. For instance, Tharad MLA and Gujarat legislative assembly speaker Shankar Chaudhary heads the Banas Dairy as chairman. Deputy assembly speaker Jetha Bharwad, the MLA from Shehra constituency, heads the Panchmahal District Cooperative Milk Producers\u2019 Union as its chairman. In addition, Amul has hosted Israeli delegations to collaborate on projects in India.",
       "alternatives": [
         "Snack Planet",
         "Bolletje",
@@ -8166,7 +8175,7 @@
     {
       "name": "Seiyu",
       "status": "Avoid",
-      "description": "Supermarket chain in Japan with more than 300 retail units. Recently had a change of ownership, from its former complicit parent company, KKR, to ​Trial Holdings Inc. Although there is no info to suggest that Trial Holdings are complicit, we advise caution, because they might still sell products from companies that are complicit, like Coca-Cola, ect.",
+      "description": "Supermarket chain in Japan with more than 300 retail units. Recently had a change of ownership, from its former complicit parent company, KKR, to \u200bTrial Holdings Inc. Although there is no info to suggest that Trial Holdings are complicit, we advise caution, because they might still sell products from companies that are complicit, like Coca-Cola, ect.",
       "alternatives": [
         "Moms Organic Market",
         "HEB Grocery",
@@ -8775,7 +8784,7 @@
     {
       "name": "Ziyad",
       "status": "Avoid",
-      "description": "In 2022, private equity firm Peak Rock Capital bought a majority stake in Ziyad, with the original Palestinian family retaining minority ownership. In 2023, Ziyad went on to buy Vintage Foods, a leading importer of food brands sold in the Middle East.  This is problematic because many of these brands that Ziyad now sells are on our Do Not Buy list, including Nido and Barbican. We have confirmed that Ziyad brand dates are sourced directly from Jericho, Palestine. The website states “We will be donating a percentage of our sales to support food relief, with a significant donation to UNICEF, PCRF, and ANERA who are dedicated to Gaza relief efforts.\"",
+      "description": "In 2022, private equity firm Peak Rock Capital bought a majority stake in Ziyad, with the original Palestinian family retaining minority ownership. In 2023, Ziyad went on to buy Vintage Foods, a leading importer of food brands sold in the Middle East.  This is problematic because many of these brands that Ziyad now sells are on our Do Not Buy list, including Nido and Barbican. We have confirmed that Ziyad brand dates are sourced directly from Jericho, Palestine. The website states \u201cWe will be donating a percentage of our sales to support food relief, with a significant donation to UNICEF, PCRF, and ANERA who are dedicated to Gaza relief efforts.\"",
       "alternatives": [
         "Cedars Hommus",
         "Baraka",
@@ -8880,7 +8889,7 @@
     {
       "name": "Southern Bancorp",
       "status": "Safe",
-      "description": "Southern Bancorp operates exclusively within underserved U.S. communities in Arkansas and Mississippi as a Community Development Financial Institution (CDFI) and B‑Corp. There is no evidence of banking operations, investments, or financial ties related to Israel or its defense sector",
+      "description": "Southern Bancorp operates exclusively within underserved U.S. communities in Arkansas and Mississippi as a Community Development Financial Institution (CDFI) and B\u2011Corp. There is no evidence of banking operations, investments, or financial ties related to Israel or its defense sector",
       "alternatives": [],
       "logo_asset": "assets/images/southern_bancorp_brand_logo.jpeg",
       "category": "General",
@@ -8907,7 +8916,7 @@
     {
       "name": "University Islamic Financial",
       "status": "Safe",
-      "description": "UIF is the first exclusively Shariah‑compliant bank in the U.S., operating under a subsidiary structure of University Bank. It offers Islamic financing products like time deposit accounts that are profit sharing based and like a Certificate of Deposit, home, commercial, and vehicle financing, adhering to Islamic ethical standards",
+      "description": "UIF is the first exclusively Shariah\u2011compliant bank in the U.S., operating under a subsidiary structure of University Bank. It offers Islamic financing products like time deposit accounts that are profit sharing based and like a Certificate of Deposit, home, commercial, and vehicle financing, adhering to Islamic ethical standards",
       "alternatives": [],
       "logo_asset": "assets/images/university_islamic_financial_brand_logo.png",
       "category": "General",
@@ -8980,7 +8989,7 @@
     {
       "name": "Ally Bank",
       "status": "Avoid",
-      "description": "As of December 31, 2024, Ally’s top institutional shareholders include Berkshire Hathaway (9.45%), Vanguard (9.16%), BlackRock (7.57%), and State Street (3.54%). While Ally itself doesn’t directly support Israeli arms or occupation-linked industries, having significant backing (>10% combined) from these large investment managers may indicate indirect exposure—given these firms often invest in global industries, including those tied to Israel.",
+      "description": "As of December 31, 2024, Ally\u2019s top institutional shareholders include Berkshire Hathaway (9.45%), Vanguard (9.16%), BlackRock (7.57%), and State Street (3.54%). While Ally itself doesn\u2019t directly support Israeli arms or occupation-linked industries, having significant backing (>10% combined) from these large investment managers may indicate indirect exposure\u2014given these firms often invest in global industries, including those tied to Israel.",
       "alternatives": [
         "Amalgamated Bank",
         "Huntington National Bank",
@@ -9000,7 +9009,7 @@
     {
       "name": "Fifth Third Bank",
       "status": "Avoid",
-      "description": "The bank holds shares in COPT Defense Properties, a U.S.-based real estate investment trust serving the defense sector. In Q4 2024, Fifth Third sold down a $1.24 million stake after previously holding around 40,119 shares",
+      "description": "The bank holds shares in COPT Defense Properties, a U.S.-based real estate investment trust serving the defense sector. In Q4 2024, Fifth\u202fThird sold down a $1.24\u202fmillion stake after previously holding around 40,119 shares",
       "alternatives": [
         "Amalgamated Bank",
         "Huntington National Bank",
@@ -13795,7 +13804,7 @@
     {
       "name": "Comptoir Des Cotonniers",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -13845,7 +13854,7 @@
     {
       "name": "GU Clothing",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -13869,7 +13878,7 @@
     {
       "name": "Helmut Lang",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -13917,7 +13926,7 @@
     {
       "name": "J Brand",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -14167,7 +14176,7 @@
     {
       "name": "PLST",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -14256,7 +14265,7 @@
     {
       "name": "Theory",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -14304,7 +14313,7 @@
     {
       "name": "Uniqlo",
       "status": "Safe",
-      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has “a zero tolerance policy toward any human rights violation”, and that it would “cooperate fully with the investigation to confirm that there is no forced labor” in its supply chain.",
+      "description": "Fast Retailing is a Japanese company that owns several brands including Uniqlo and Theory. Uniqlo has provided over 41 million pieces of clothing and $25 million to UNHCR to serve vulnerable populations in 58 countries, including 42,000 items to UNRWA in 2016 for vulnerable Palestinian refugees in Lebanon. We are aware that they have been accused of sourcing from Chinese companies that use Uyghur forced labor, but the company has stated that it has \u201ca zero tolerance policy toward any human rights violation\u201d, and that it would \u201ccooperate fully with the investigation to confirm that there is no forced labor\u201d in its supply chain.",
       "alternatives": [
         "Honest Basics",
         "Athari Wear",
@@ -15956,7 +15965,7 @@
     {
       "name": "Dr Bronners",
       "status": "Safe",
-      "description": "Dr. Bronner’s is a proud Jewish American family owned company that has shown they put justice over profits by taking a strong stand against the Occupation in a way we would like to see other companies do. Although their products are sold in Israel, the company put out a statement on Jan 8/2024 calling for Ceasefire, ending US aid for the war, and acknowledging the historical context of Occupation that led to Oct 7. While the company was founded in 1948 by self-proclaimed Zionist Emmanuel Bronner, it has evolved through two generations to become a champion of social justice everywhere, including Palestine. It sources 90% of the olive oil used in its products from Canaan, a Palestinian owned company near Jenin that works closely with the Palestine Fair Trade Association and its 1700 small farmers. The other 10% of its olive oil is sourced from Sindyanna, a fair trade business run by Arab and Jewish women in Israel.",
+      "description": "Dr. Bronner\u2019s is a proud Jewish American family owned company that has shown they put justice over profits by taking a strong stand against the Occupation in a way we would like to see other companies do. Although their products are sold in Israel, the company put out a statement on Jan 8/2024 calling for Ceasefire, ending US aid for the war, and acknowledging the historical context of Occupation that led to Oct 7. While the company was founded in 1948 by self-proclaimed Zionist Emmanuel Bronner, it has evolved through two generations to become a champion of social justice everywhere, including Palestine. It sources 90% of the olive oil used in its products from Canaan, a Palestinian owned company near Jenin that works closely with the Palestine Fair Trade Association and its 1700 small farmers. The other 10% of its olive oil is sourced from Sindyanna, a fair trade business run by Arab and Jewish women in Israel.",
       "alternatives": [
         "Blueland Cleaners",
         "EO Products",
@@ -21898,7 +21907,7 @@
       "name": "Cisco",
       "category": "Technology and Computers",
       "status": "High",
-      "description": "The Company integrates platforms across networking, security, collaboration, applications and the cloud. Through its fully owned Israeli subsidiaries, Cisco Systems has a broad base of complicity with Israelâs occupation economy, predominantly through the provision of services to the Israeli military.",
+      "description": "The Company integrates platforms across networking, security, collaboration, applications and the cloud. Through its fully owned Israeli subsidiaries, Cisco Systems has a broad base of complicity with Israel\u00e2\u0080\u0099s occupation economy, predominantly through the provision of services to the Israeli military.",
       "country": "United States",
       "alternatives": [],
       "subbrands": [],
@@ -21920,7 +21929,7 @@
       "name": "General Electric",
       "category": "Technology and Computers",
       "status": "Medium",
-      "description": "A US-based publicly traded multinational conglomerate company active in the fields of power, renewable energy, aviation and healthcare. The company provides wind turbines and maintenance services to two large wind energy projects in the occupied Syrian Golan, âEmek Habachaâ and âRuach Beresheetâ, the largest renewable energy projects in Israel.",
+      "description": "A US-based publicly traded multinational conglomerate company active in the fields of power, renewable energy, aviation and healthcare. The company provides wind turbines and maintenance services to two large wind energy projects in the occupied Syrian Golan, \u00e2\u0080\u009cEmek Habacha\u00e2\u0080\u009d and \u00e2\u0080\u009cRuach Beresheet\u00e2\u0080\u009d, the largest renewable energy projects in Israel.",
       "country": "United States",
       "alternatives": [],
       "subbrands": [],
@@ -21998,7 +22007,7 @@
       "name": "NVIDIA",
       "category": "Technology and Computers",
       "status": "Medium",
-      "description": "NVIDIAâs operations in Israel mainly involve AI and deep learning technologies. NVIDIA also aquired the Israeli company Mellanox Technologies which is prominent in networking products. Nvidia recently raised $10 million for Israeli charities aiding war-affected civilians, donated computers to evacuated from the north and south of Israel, and provided hot meals from its Yokneam office.",
+      "description": "NVIDIA\u00e2\u0080\u0099s operations in Israel mainly involve AI and deep learning technologies. NVIDIA also aquired the Israeli company Mellanox Technologies which is prominent in networking products. Nvidia recently raised $10 million for Israeli charities aiding war-affected civilians, donated computers to evacuated from the north and south of Israel, and provided hot meals from its Yokneam office.",
       "country": "United States",
       "alternatives": [
         "AMD"
@@ -22069,15 +22078,15 @@
       "logo_asset": "assets/images/no-logo.png"
     },
     {
-      "name": "NestlÃ©",
+      "name": "Nestl\u00c3\u00a9",
       "category": "Food and Beverages",
       "status": "High",
-      "description": "NestlÃ©, a Swiss multinational, has a presence in Israel through its investment in Osem, a major Israeli food producer. This investment connects NestlÃ© to various local industries and markets, broadening its involvement in the region.",
+      "description": "Nestl\u00c3\u00a9, a Swiss multinational, has a presence in Israel through its investment in Osem, a major Israeli food producer. This investment connects Nestl\u00c3\u00a9 to various local industries and markets, broadening its involvement in the region.",
       "country": "switzerland",
       "alternatives": [],
       "subbrands": [
         "Perrier",
-        "NescafÃ©",
+        "Nescaf\u00c3\u00a9",
         "Nespresso",
         "NIDO",
         "Gerber",
@@ -22085,7 +22094,7 @@
         "Kit Kat",
         "Crunch",
         "Smarties",
-        "HÃ¤agen-Dazs",
+        "H\u00c3\u00a4agen-Dazs",
         "Purina",
         "Boost",
         "Stouffer's",
@@ -22100,7 +22109,7 @@
       "name": "Osem",
       "category": "Food and Beverages",
       "status": "Medium",
-      "description": "A subsidiary of NestlÃ©, Osem produces a wide range of food products and it is headquartered in Israel. It has various facilities located throughout Israel, producing goods consumed domestically and internationally.",
+      "description": "A subsidiary of Nestl\u00c3\u00a9, Osem produces a wide range of food products and it is headquartered in Israel. It has various facilities located throughout Israel, producing goods consumed domestically and internationally.",
       "country": "Israel (Local)",
       "alternatives": [],
       "subbrands": [],
@@ -22160,7 +22169,7 @@
       "name": "Booking Holdings (Booking.com)",
       "category": "Online Services and Platforms",
       "status": "Very High",
-      "description": "Through its website, Booking.com promotes properties located on occupied Palestinian and Syrian land. Properties in Israeli settlements in the occupied West Bank are listed as located either in Israel or in âPalestinian Territory - Israeli settlement,â while those located in occupied East Jerusalem and Syrian Golan are listed exclusively as located in Israel, misinforming consumers that book short term or long-term rentals.",
+      "description": "Through its website, Booking.com promotes properties located on occupied Palestinian and Syrian land. Properties in Israeli settlements in the occupied West Bank are listed as located either in Israel or in \u00e2\u0080\u009cPalestinian Territory - Israeli settlement,\u00e2\u0080\u009d while those located in occupied East Jerusalem and Syrian Golan are listed exclusively as located in Israel, misinforming consumers that book short term or long-term rentals.",
       "country": "USA",
       "alternatives": [],
       "subbrands": [],
@@ -22224,7 +22233,7 @@
       "name": "Wix.com",
       "category": "Online Services and Platforms",
       "status": "Very High",
-      "description": "Wix is a platform that allows users to create websites through the use of online drag and drop tools. It has a significant user base worldwide. Wix encouraged its employees to create content supporting âIsraelâs narrativeâ in the countryâs conflict with Hamas militants in Gaza, leaked internal messages show.",
+      "description": "Wix is a platform that allows users to create websites through the use of online drag and drop tools. It has a significant user base worldwide. Wix encouraged its employees to create content supporting \u00e2\u0080\u009cIsrael\u00e2\u0080\u0099s narrative\u00e2\u0080\u009d in the country\u00e2\u0080\u0099s conflict with Hamas militants in Gaza, leaked internal messages show.",
       "country": "Israel (Global)",
       "alternatives": [],
       "subbrands": [
@@ -22417,7 +22426,7 @@
       "name": "Plarium",
       "category": "App & game studios",
       "status": "Medium",
-      "description": "Plarium is an Israeli game developer headquartered in Herzliya, founded in 2009. The company is renowned for its MMO strategy games like Vikings: War of Clans and Raid: Shadow Legends. As a key player in Israelâs tech scene.",
+      "description": "Plarium is an Israeli game developer headquartered in Herzliya, founded in 2009. The company is renowned for its MMO strategy games like Vikings: War of Clans and Raid: Shadow Legends. As a key player in Israel\u00e2\u0080\u0099s tech scene.",
       "country": "Israel (Global)",
       "alternatives": [],
       "subbrands": [],
@@ -22447,30 +22456,30 @@
       "name": "G1 Secure Solutions (G4S)",
       "category": "Others",
       "status": "Very High",
-      "description": "Also known as G4S the company has provided security services, including security equipment and personnel, to businesses in the settlements in the occupied West Bank, including Modiâin Illit, Maâale Adumim, and the Kalia settlement in the Jordan Valley. The company has also provided services to the settlement neighborhood of Har Adar in occupied East Jerusalem. Including many more cases.",
+      "description": "Also known as G4S the company has provided security services, including security equipment and personnel, to businesses in the settlements in the occupied West Bank, including Modi\u00e2\u0080\u0099in Illit, Ma\u00e2\u0080\u0099ale Adumim, and the Kalia settlement in the Jordan Valley. The company has also provided services to the settlement neighborhood of Har Adar in occupied East Jerusalem. Including many more cases.",
       "country": "Israel (Global)",
       "alternatives": [],
       "subbrands": [],
       "logo_asset": "assets/images/g4s.png"
     },
     {
-      "name": "L'OrÃ©al",
+      "name": "L'Or\u00c3\u00a9al",
       "category": "Others",
       "status": "Low",
-      "description": "L'OrÃ©al has faced scrutiny and calls for boycotts in the past due to supporting Israel, particularly during conflicts involving Israel and Palestine. This scrutiny has often revolved around donations of products to women serving in the Israeli Defense Forces or other actions that are seen as supportive of Israel.",
+      "description": "L'Or\u00c3\u00a9al has faced scrutiny and calls for boycotts in the past due to supporting Israel, particularly during conflicts involving Israel and Palestine. This scrutiny has often revolved around donations of products to women serving in the Israeli Defense Forces or other actions that are seen as supportive of Israel.",
       "country": "France",
       "alternatives": [],
       "subbrands": [
-        "LancÃ´me",
+        "Lanc\u00c3\u00b4me",
         "Yves Saint Laurent",
         "Giorgio Armani",
-        "Kiehlâs",
+        "Kiehl\u00e2\u0080\u0099s",
         "Urban Decay",
         "Biotherm",
         "Maybelline New York",
         "Garnier",
         "NYX Professional Makeup",
-        "KÃ©rastase",
+        "K\u00c3\u00a9rastase",
         "Redken",
         "La Roche-Posay",
         "Vichy",
