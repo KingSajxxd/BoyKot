@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _loadData() async {
-    final loadedData = await _service.loadLocalData();
+    final loadedData = await _service.loadData();
     if (!mounted || loadedData == null) return;
 
     final items = loadedData['items'] as List<dynamic>? ?? [];

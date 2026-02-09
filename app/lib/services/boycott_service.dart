@@ -1,10 +1,29 @@
 import 'dart:convert';
-
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 
 class BoycottService {
-  Future<Map<String, dynamic>?> loadLocalData() async {
+  // REPLACE THIS LINK WITH YOUR RAW GITHUB LINK
+  static const String _remoteUrl = 
+      'https://raw.githubusercontent.com/KingSajxxd/BoyKot/refs/heads/main/app/assets/boycott_data.json';
+
+  Future<Map<String, dynamic>?> loadData() async {
+    // 1. Try to fetch the latest data from the internet
+    try {
+      final response = await http.get(Uri.parse(_remoteUrl)).timeout(
+        const Duration(seconds: 5), // Don't make the user wait too long
+      );
+
+      if (response.statusCode == 200) {
+        // If successful, parse and return the fresh data
+        return json.decode(response.body) as Map<String, dynamic>;
+      }
+    } catch (e) {
+      // If no internet or error, silently fail and fall back to local
+      print("⚠️ Offline or GitHub down. Using local data.");
+    }
+
+    // 2. Fallback: Load the local file shipped with the app
     try {
       final jsonString = await rootBundle.loadString('assets/boycott_data.json');
       return json.decode(jsonString) as Map<String, dynamic>;
