@@ -23,21 +23,33 @@ HEADERS = {
 # --- THE MEGA SEED LIST ---
 # This forces the scraper to check these brands directly
 MANUAL_SEEDS = [
-    "McDonalds", "Starbucks", "Coca Cola", "Pepsi", "Nestle", "Burger King", "Pizza Hut", "Dominos", "Papa Johns",
-    "Disney", "Marvel", "Fox", "Paramount", "Warner Bros", "Netflix", "Amazon", "Google", "HP", "Siemens", "AXA",
-    "Puma", "Adidas", "Nike", "Zara", "H&M", "Marks and Spencer", "L'Oreal", "Garnier", "Maybelline", "Revlon",
-    "Estee Lauder", "Clinique", "MAC Cosmetics", "Victoria's Secret", "Bath and Body Works", "Ahava", "Sabra",
-    "SodaStream", "Keter", "Teva", "Wix", "Fiverr", "Monday.com", "Intel", "Motorola", "Airbnb", "Booking.com",
-    "Expedia", "TripAdvisor", "Carrefour", "Tesco", "Lidl", "Aldi", "Costco", "Walmart", "Target", "Whole Foods",
-    "Danone", "Activia", "Evian", "Volvic", "General Mills", "Kelloggs", "Mars", "Snickers", "Twix", "M&Ms",
-    "KitKat", "Ferrero Rocher", "Nutella", "Kinder", "Mondelez", "Cadbury", "Oreo", "Toblerone", "Milka", "Lindt",
-    "Kraft Heinz", "Unilever", "Ben & Jerry's", "Hellmann's", "Knorr", "Maggi", "Lipton", "Nescafe", "Nespresso",
-    "Pringles", "Lays", "Doritos", "Cheetos", "Gatorade", "Powerade", "Vitamin Water", "Dasani", "Aquafina",
-    "7Up", "Sprite", "Fanta", "Mountain Dew", "Dr Pepper", "Schweppes", "Tropicana", "Minute Maid", "Simply Orange",
-    "Innocent", "Alpro", "Oatly", "Beyond Meat", "Impossible Foods", "Quorn", "Amy's Kitchen", "Annie's Homegrown",
-    "Volvo", "CAT", "JCB", "Hyundai", "Chevron", "BP", "Shell", "ExxonMobil", "Texaco", "Caltex", "Barclays",
-    "HSBC", "BNP Paribas", "Societe Generale", "Scotiabank", "RBC", "TD Bank", "BMO", "CIBC", "Manulife", "Sun Life",
-    "Hardees", "KFC", "Subway", "Taco Bell", "Wendy's", "Dunkin", "Krispy Kreme", "Tim Hortons", "Costa Coffee"
+    # Fast Food
+    "McDonalds", "Starbucks", "Coca Cola", "Pepsi", "Nestle",
+    "Burger King", "KFC", "Subway", "Pizza Hut", "Dominos", "Papa Johns",
+    "Wendys", "Taco Bell", "Dunkin", "Krispy Kreme", "Tim Hortons", "Costa Coffee",
+    "Hardees", "Five Guys", "Shake Shack",
+
+    # Snacks & Drinks
+    "Nescafe", "Nespresso", "Maggi", "KitKat", "Cadbury", "Oreo", "Lindt", "Nutella",
+    "Pringles", "Lays", "Doritos", "Cheetos", "Toblerone", "Milka", "Ben & Jerry's",
+    "Gatorade", "Powerade", "Dasani", "Aquafina", "Sprite", "Fanta", "7Up",
+    "Mountain Dew", "Dr Pepper", "Schweppes", "Tropicana", "Minute Maid", "Lipton",
+
+    # Retail & Tech
+    "Amazon", "Walmart", "Target", "Costco", "Carrefour", "Tesco", "Lidl", "Aldi", "IKEA",
+    "Google", "Microsoft", "Apple", "Meta", "Facebook", "Instagram", "WhatsApp",
+    "Samsung", "Sony", "LG", "Intel", "HP", "Dell", "Lenovo", "Nvidia", "Siemens",
+    "Puma", "Adidas", "Nike", "Zara", "H&M", "Uniqlo", "Marks and Spencer",
+
+    # Beauty & Personal Care
+    "Loreal", "Garnier", "Maybelline", "Revlon", "Clinique", "MAC Cosmetics",
+    "Estee Lauder", "Victoria's Secret", "Bath and Body Works", "Ahava",
+    "Nivea", "Dove", "Axe", "Vaseline", "Pantene", "Gillette", "Colgate", "Listerine",
+    "Head and Shoulders", "Oral-B", "CeraVe", "La Roche-Posay",
+
+    # Travel & Finance
+    "Airbnb", "Booking.com", "Expedia", "TripAdvisor", "Uber",
+    "AXA", "HSBC", "Barclays", "Pillsbury", "General Mills"
 ]
 
 def setup_dirs():
