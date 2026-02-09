@@ -59,38 +59,65 @@ def clean_text(text):
     return text.replace("\n", " ").strip()
 
 def get_csrf_token(session):
-    """Fetches the homepage to get a CSRF token for searching."""
+    """
+    Robust CSRF fetching: Checks HTML Input AND Cookies.
+    """
+    print("   ...fetching homepage for CSRF...", end=" ")
     try:
-        r = session.get(BASE_URL, headers=HEADERS, timeout=10)
+        r = session.get(BASE_URL, headers=HEADERS, timeout=15)
+        print(f"(Status: {r.status_code})", end=" ")
+        
+        # 1. Try HTML Input (Standard Django)
         soup = BeautifulSoup(r.text, "html.parser")
         token = soup.find("input", {"name": "csrfmiddlewaretoken"})
         if token:
+            print("Found in HTML.")
             return token["value"]
-    except:
-        pass
+            
+        # 2. Try Cookie (AJAX fallback)
+        if 'csrftoken' in session.cookies:
+            print("Found in Cookies.")
+            return session.cookies['csrftoken']
+            
+    except Exception as e:
+        print(f"Error: {e}")
+        
+    print("Not found.")
     return None
 
 def resolve_seed_url(session, token, seed_name):
     """
-    SEARCHES for the brand name instead of guessing the URL.
-    Returns a list of actual URLs found (e.g. search 'Dominos' -> finds '/brand/dominos-pizza/')
+    SEARCHES for the brand name.
+    If search fails, FALLS BACK to guessing the URL to ensure we don't skip it.
     """
     found_urls = []
-    if not token: return []
     
-    try:
-        payload = {'csrfmiddlewaretoken': token, 'search_text': seed_name}
-        r = session.post(BASE_URL, data=payload, headers=HEADERS, timeout=10)
-        
-        # Parse HTML results
-        soup = BeautifulSoup(r.text, "html.parser")
-        for a in soup.find_all("a", href=True):
-            if a['href'].startswith("/brand/") and a['href'] != "/brand/":
-                found_urls.append(f"{BASE_URL}{a['href']}")
-                
-    except Exception as e:
-        print(f"   ⚠️ Search failed for '{seed_name}': {e}")
-        
+    # 1. Try Smart Search
+    if token:
+        try:
+            # Important: Update headers with Token for Django AJAX
+            post_headers = HEADERS.copy()
+            post_headers['X-CSRFToken'] = token
+            
+            payload = {'csrfmiddlewaretoken': token, 'search_text': seed_name}
+            r = session.post(BASE_URL, data=payload, headers=post_headers, timeout=10)
+            
+            soup = BeautifulSoup(r.text, "html.parser")
+            for a in soup.find_all("a", href=True):
+                if a['href'].startswith("/brand/") and a['href'] != "/brand/":
+                    found_urls.append(f"{BASE_URL}{a['href']}")
+        except Exception as e:
+            print(f"   ⚠️ Search err for '{seed_name}': {e}")
+            
+    # 2. Fallback: If search returned nothing, force-add the direct URL
+    # This fixes the "Missing Pantene" issue if search is broken
+    if not found_urls:
+        safe_name = urllib.parse.quote(seed_name)
+        # Try a few variations to maximize hit rate
+        found_urls.append(f"{BASE_URL}/brand/{safe_name}/") 
+        if " " in seed_name:
+             found_urls.append(f"{BASE_URL}/brand/{safe_name.replace('%20', '-')}/")
+             
     return found_urls
 
 def download_image(url):
@@ -123,13 +150,14 @@ def fetch_sitemap(session):
                 urls.add(f"{BASE_URL}/brand/{decoded}/")
             print(f"   ✅ Found {len(urls)} brands in Sitemap!")
     except:
-        print("   ⚠️ Sitemap not available. relying on Smart Search.")
+        print("   ⚠️ Sitemap not available.")
     return urls
 
 def scrape_brand_details(session, brand_url):
     time.sleep(random.uniform(0.5, 1.0))
     try:
         resp = session.get(brand_url, headers=HEADERS, timeout=15)
+        # If 404, we skip it (invalid guess)
         if resp.status_code != 200:
             return None, []
 
@@ -194,38 +222,39 @@ def scrape_brand_details(session, brand_url):
         return None, []
 
 def main():
-    print("--- STARTING SMART-SEARCH SCRAPER ---")
+    print("--- STARTING FAIL-SAFE SCRAPER ---")
     setup_dirs()
     session = requests.Session()
     
-    # 1. Try Sitemap First
+    # 1. Sitemap
     queue_urls = fetch_sitemap(session)
 
-    # 2. Smart Search for Manual Seeds
-    print(f"🔎 Resolving {len(MANUAL_SEEDS)} seeds via Search...")
+    # 2. Smart Search + Fallback
+    print(f"🔎 Resolving {len(MANUAL_SEEDS)} seeds...")
     csrf_token = get_csrf_token(session)
     
-    if csrf_token:
-        found_seeds = 0
-        for i, seed in enumerate(MANUAL_SEEDS):
-            if i % 10 == 0: print(f"   ...searching batch {i+1}-{i+10}...")
-            
-            real_urls = resolve_seed_url(session, csrf_token, seed)
-            for url in real_urls:
-                queue_urls.add(url)
-                found_seeds += 1
-            
-            time.sleep(0.5) # Be polite
-        print(f"   ✅ Resolved {found_seeds} valid URLs from seeds.")
-    else:
-        print("   ❌ Could not get CSRF token. Skipping smart search.")
+    if not csrf_token:
+        print("⚠️ Warning: No CSRF Token found. Will use Direct URL Guessing only.")
 
-    print(f"\n--- CRAWLING {len(queue_urls)} TARGETS ---")
+    found_seeds = 0
+    for i, seed in enumerate(MANUAL_SEEDS):
+        if i % 10 == 0: print(f"   ...processing batch {i+1}...")
+        
+        # This will return Search Results OR Guessed URLs
+        real_urls = resolve_seed_url(session, csrf_token, seed)
+        for url in real_urls:
+            queue_urls.add(url)
+            found_seeds += 1
+        
+        time.sleep(0.3)
+        
+    print(f"   ✅ Queued {len(queue_urls)} targets (Sitemap + Seeds + Guesses).")
+    print(f"\n--- CRAWLING TARGETS ---")
 
     visited = set()
     final_items = []
 
-    # Load previous progress
+    # Load existing
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r") as f:
@@ -252,18 +281,18 @@ def main():
         data, new_links = scrape_brand_details(session, clean_url)
 
         if data:
-            # Deduplicate by name
+            # Dedupe
             existing_names = {x.get("name") for x in final_items}
             if data["name"] not in existing_names:
                 final_items.append(data)
 
-            # Add new spider links
+            # Spider
             for link in new_links:
                 clean_link = link if link.endswith("/") else link + "/"
                 if clean_link not in visited and clean_link not in queue_list:
                     queue_list.append(clean_link)
 
-        # Save frequently
+        # Save
         if i % 20 == 0:
             with open(OUTPUT_FILE, "w") as f:
                 json.dump(
@@ -271,9 +300,9 @@ def main():
                     f, indent=2, ensure_ascii=False
                 )
 
-    # Final Save
+    # Final
     output = {
-        "meta": {"source": "Disoccupied Smart-Seed", "updated": time.strftime("%Y-%m-%d")},
+        "meta": {"source": "Disoccupied Fail-Safe", "updated": time.strftime("%Y-%m-%d")},
         "toll": {"killed": 73000, "injured": 171000, "children": 21000, "last_update": "Live"},
         "items": final_items,
     }
