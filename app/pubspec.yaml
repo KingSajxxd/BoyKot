@@ -1,5 +1,5 @@
 name: boykot
-description: "A new Flutter project."
+description: "A Flutter mobile application to help users identify brands to boycott based on data from public sources."
 publish_to: 'none'
 
 version: 1.0.0+1
