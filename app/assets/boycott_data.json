@@ -1,13 +1,15 @@
 {
   "meta": {
-    "source": "Disoccupied Mega-Seed",
-    "updated": "2026-02-09"
+    "source": "Merged Database",
+    "updated": "2026-02-15"
   },
   "toll": {
-    "killed": 73000,
-    "injured": 171000,
-    "children": 21000,
-    "last_update": "Live"
+    "killed": 72051,
+    "injured": 171706,
+    "children": 20179,
+    "women": 12500,
+    "starved": 463,
+    "last_update": "2026-02-14"
   },
   "items": [
     {
